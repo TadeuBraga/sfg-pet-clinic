@@ -1,5 +1,7 @@
 package guru.springframework.sfgpetclinic.model;
 
+import org.springframework.context.annotation.Profile;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -9,6 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "owners")
+@Profile("sdjpa")
 public class Owner extends Person {
 
     private String address;
